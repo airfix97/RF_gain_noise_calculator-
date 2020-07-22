@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Welcome to AIRFIX.AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'style.css' %}" />
+     
+  </head>
+  <body>
+    <div id="particles-js">
+      <div class="container">
+        <h1 class="heading">Hello Folks! Calculate Anything</h1>
+        <br><br><br>
+        <div class="wrapper">
+          <form action="neurons" method="post">
+            {% csrf_token %}
+            <button class="button button1">Neurons</button><br>
+          </form>
+          <form action="sha2" method="post">
+            {% csrf_token %}
+            <button class="button button2">SHA</button><br>
+          </form>
+          <form action="gain" method="post">
+            {% csrf_token %}
+            <button class="button button3">Gain</button><br>
+          </form>
+          <form action="noise" method="post">
+            {% csrf_token%}
+            <button class="button button4">Noise</button><br>
+          </form>
+          <form action="about" method="post">
+            {% csrf_token%}
+            <button class="button button5">About</button><br>
+          </form>
+        </div>
+        <br><br><br>
+        <div class="typewriter">
+          <h1>Calculate faster than your Calc.</h1>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="{% static 'particles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app.js' %}"></script>
+  </body>
+</html>

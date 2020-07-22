@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About me!!!</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'style.css' %}" />
+</head>
+<body>
+    <div id="particles-js">
+        <div class="container">
+            <div class="typewriter">
+                <h1>About myself !!!</h1>
+            </div>
+            <div class="wrapper">
+                <form action="back" method="post">
+                    {% csrf_token %}
+                    <h3 style="font-family:cursive; color: #fff" >My name is Airfix (IGN)</h3>
+                    <br>
+                    <p style="font-family:cursive; color: #fff" >While Calculating values of Gain and Noise of an RF Amplifier,</p>
+                    <p style="font-family:cursive; color: #fff">It took me around 15 minutes just to calculate it on my Calc</p>
+                    <p style="font-family:cursive; color: #fff">and another 15 to plot it on Smith Chart.</p>
+                    <p style="font-family:cursive; color: #fff">Made this website during Pandemic-Lockdown for fun.</p>
+                    <p style="font-family:cursive; color: #fff">Hope you like it, Its still buggy though !</p>   
+                    
+                    <br>
+                    <br><br><br><br>
+                    <button class="button button1">Back</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'particles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app.js' %}"></script>    
+    
+</body>
+</html>

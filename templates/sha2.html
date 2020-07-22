@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculate SHA code</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'style.css' %}" />
+</head>
+<body>
+    <div id="particles-js">
+        <div class="container">
+            <form action="back" method="post">
+                {% csrf_token %}
+                <button class="button button1">Back</button>
+            </form>
+            <div class="typewriter">
+                <h1>Calculate your SHA-256 code now!</h1>
+            </div>
+            <div class="wrapper">
+                <form action="sha" method="post">
+                    {% csrf_token %}
+                    <h3 style="font-family:cursive; color: #fff" >Enter data: </h3>
+                    <br>
+                    <input type="text" name="num1">
+                    <br><br><br><br>
+                    <button class="button button2">Convert</button>
+                </form>
+                <br><br><br><br>
+                <h5 style="font-family:cursive; color: #fff">{{text}} {{value}}</h5>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'particles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app.js' %}"></script>    
+    
+</body>
+</html>

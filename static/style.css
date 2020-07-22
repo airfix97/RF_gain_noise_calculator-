@@ -1,0 +1,80 @@
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+#particles-js {
+  height: 100%;
+  background: #111111;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+}
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 28px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  font-family: cursive;
+}
+
+.wrapper {
+  text-align: center;
+  top: 40%;
+}
+
+button:hover {
+  color: #ffffff;
+  background: lightsteelblue;
+  transition: all 0.4s ease 0s;
+}
+
+.heading {
+  text-align: center;
+  color: white;
+  font-family: cursive;
+}
+
+  /* DEMO-SPECIFIC STYLES */
+  .typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }

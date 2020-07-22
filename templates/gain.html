@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculate Gain</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'style.css' %}" />
+</head>
+<body>
+    <div id="particles-js">
+        <div class="container">
+            <div class="typewriter">
+                <h1>Calculate Gain now!!</h1>
+            </div>
+            <br><br><br><br>
+            <div class="wrapper">
+                <form action="gain_result" method="post">
+                    {% csrf_token %}
+                    <label for="ts1" style="font-family:cursive; color: #fff">&Gamma;s : </label>
+                    <input type="text" id="ts1" name='ts1'>
+                    <label for="tsa" style="font-family:cursive; color: #fff">  &ang; : </label>
+                    <input type="text" id="tsa" name='tsa'>
+                    <br><br>
+                    <label for="tl1" style="font-family:cursive; color: #fff">&Gamma;l : </label>
+                    <input type="text" id="tl1" name='tl1'>
+                    <label for="tla" style="font-family:cursive; color: #fff">  &ang; : </label>
+                    <input type="text" id="tla" name='tla'>
+                    <br><br>
+                    <label for="s111" style="font-family:cursive; color: #fff">S11 : </label>
+                    <input type="text" id="s111" name='s111'>
+                    <label for="s11a" style="font-family:cursive; color: #fff">  &ang; : </label>
+                    <input type="text" id="s11a" name='s11a'>
+                    <br><br>
+                    <label for="s121" style="font-family:cursive; color: #fff">S12 : </label>
+                    <input type="text" id="s121" name='s121'>
+                    <label for="s12a" style="font-family:cursive; color: #fff">  &ang; : </label>
+                    <input type="text" id="s12a" name='s12a'>
+                    <br><br>
+                    <label for="s211" style="font-family:cursive; color: #fff">S21 : </label>
+                    <input type="text" id="s211" name='s211'>
+                    <label for="s21a" style="font-family:cursive; color: #fff">  &ang; : </label>
+                    <input type="text" id="s21a" name='s21a'>
+                    <br><br>
+                    <label for="s221" style="font-family:cursive; color: #fff">S22 : </label>
+                    <input type="text" id="s221" name='s221'>
+                    <label for="s22a" style="font-family:cursive; color: #fff">  &ang; : </label>
+                    <input type="text" id="s22a" name='s22a'>
+                    <br><br><br><br>
+                    <button class="button button1">Calculate</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'particles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app.js' %}"></script>    
+    
+</body>
+</html>

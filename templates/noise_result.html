@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Noise cirlces</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'style.css' %}" />
+</head>
+<body>
+    <div id="particles-js">
+        <div class="container">
+            <form action="back" method="post">
+                {% csrf_token %}
+                <button class="button button1">Back</button>
+            </form>
+            <h3 style="font-family:cursive; color: #fff">Fmin : {{fmin}} dB.</h3>    
+            <h3 style="font-family:cursive; color: #fff">&Gamma;opt : {{x}} &ang; {{angle}}&deg;</h3>
+            <br>
+            <h3 style="font-family:cursive; color: #fff">Rn : {{rn}} &#8486;</h3>
+            <h3 style="font-family:cursive; color: #fff">F : {{f}} dB.</h3>
+            <br><br><br>
+            <div class="typewriter">
+                <h1>Plot the below data on Smith Chart!!</h1>
+            </div>
+            <br><br><br>
+            <h3 style="font-family:cursive; color: #fff">Noise parameter : {{noise_parameter}}</h3>
+            <br><br>
+            <h3 style="font-family:cursive; color: #fff">Center of Noise Cirlce : {{center}} &ang;{{angle}}&deg;</h3>
+            <br><br>    
+            <h3 style="font-family:cursive; color: #fff">Radius of Circle : {{radius}}</h3>
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'particles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app.js' %}"></script>    
+    
+</body>
+</html>

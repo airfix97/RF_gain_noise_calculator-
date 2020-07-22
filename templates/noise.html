@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculate Noise Circles</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'style.css' %}" />
+</head>
+<body>
+    <div id="particles-js">
+        <div class="container">
+            <form action="back" method="post">
+                {% csrf_token %}
+                <button class="button button1">Back</button>
+            </form>
+            <div class="typewriter">
+                <h1>Calculate your Noise Circles now!</h1>
+            </div>
+            <br><br><br><br>
+            <div class="wrapper">
+                <form action="noisecircle" method="post">
+                    {% csrf_token %}
+                    <label for="fmin" style="font-family:cursive; color: #fff">Fmin : </label>
+                    <input type="text" id="fmin" name='Fmin'>
+                    <br><br>
+                    <label for="opt" style="font-family:cursive; color: #fff">&Gamma;opt : </label>
+                    <input type="text" id="opt" name='opt'>
+                    <label for="angle" style="font-family:cursive; color: #fff">  &ang; : </label>
+                    <input type="text" id="angle" name='angle'>
+                    <br><br>
+                    <label for="rn" style="font-family:cursive; color: #fff">Rn : </label>
+                    <input type="text" id="rn" name='rn'>
+                    <br><br>
+                    <label for="F" style="font-family:cursive; color: #fff">F : </label>
+                    <input type="text" id="F" name='F'>
+                    <br><br>
+                    <button class="button">Calculate</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'particles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app.js' %}"></script>    
+    
+</body>
+</html>
